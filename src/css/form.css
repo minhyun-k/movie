@@ -1,0 +1,75 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+button {
+  cursor: pointer;
+  outline: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1660px;
+  margin: auto;
+}
+
+.form {
+  max-width: 320px;
+  position: relative;
+  width: 100%;
+}
+.form .search-form {
+  --width-of-input: 200px;
+  --border-height: 1px;
+  --border-before-color: hsla(0, 0%, 87%, .39);
+  --border-after-color: red;
+  --input-hovered-color: #4985e01f;
+  position: relative;
+  width: var(--width-of-input);
+}
+.form .search-form > input {
+  background-color: transparent;
+  border: none;
+  border-bottom: var(--border-height) solid var(--border-before-color);
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 0.9rem;
+  padding-block: 0.7em;
+  padding-inline: 0.5em;
+  outline: 0;
+  width: 100%;
+}
+.form .search-form .input-border {
+  background-color: var(--border-after-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  transition: 0.3s;
+  width: 0;
+}

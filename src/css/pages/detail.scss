@@ -1,0 +1,194 @@
+@import '../common';
+
+.detail{}
+
+//banner
+.banner12{
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+    &::before{
+        content: '';
+        background-color: rgba(0, 0, 0, .6);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-image: linear-gradient(0deg, #0f0f0f transparent);
+}
+}
+.content1{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -200px;
+    max-width: 1260px;
+    padding: 0 2rem;
+    position: relative;
+    margin-bottom: 3rem;
+    .content1-poster{
+        flex: 1 1;
+        .content-poster-img{
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 15px;
+            padding-top: 165%;
+        }
+    }
+    .content1-info{
+        padding-left: 2rem;
+        position: relative;
+        width: 70%;
+        h1{
+            font-size: 4rem;
+            line-height: 1;
+            margin-bottom: 2rem;
+        }
+        .category{
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            .category_item{
+                background-color: #0f0f0f;
+                border: 2px solid #fff;
+                border-radius: 15px;
+                font-size: .8rem;
+                font-weight: 600;
+                padding: .5rem 1.5rem;
+                margin-bottom: 2rem;
+            }
+        }
+        .desc{ margin-bottom: 2rem;}
+    }
+}
+
+//casts
+.cast{
+    margin-bottom: 2rem;
+    .cast-title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h2{}
+    }
+    .casts{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+        .casts_item{
+            .casts_item_img{
+                background-size: cover;
+                margin-bottom: .5rem;
+                padding-top: 160px;
+            }
+            .casts_item_name{font-size: .8rem;}
+        }
+    }
+}
+
+//main
+.main{}
+
+//video
+.main_content{
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    .video{
+        margin-bottom: 3rem;
+        .video_title{
+            margin-bottom: 1.5rem;
+            h2{}
+        }
+        iframe{border: 0;}
+    }
+
+    .main_content_header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        h2{}
+    }
+    .main_content_list{}
+}
+
+// tv_card
+.tv_card_box{
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15% 15% 15%;
+    column-gap: 2%;
+    row-gap: 3%;
+}
+.tv_card{
+    .c_img_detail{
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 15px;
+        margin-bottom: 1rem;
+        padding-top: 160%;
+        position: relative;
+    }
+    &.c_img_detail:hover{color: red;}
+    &.c_img_detail::before{
+        background-color: #000;
+        border-radius: 15px;
+        bottom: 0;
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        transition: .3s;
+    }
+    @media (hover: hover) and (pointer: fine) {
+        &:hover::before{
+            opacity: 0.8;;
+        }
+        &:hover .card-btn{
+            transform: translate(-50%, -50%) scale(0.7);
+        }
+    }
+    .card-btn_detail{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.3s; box-shadow:  0.3s;
+            background-color: red;
+            border: 4px solid transparent;
+            border-radius: 15px;
+            box-shadow: 0 0 7px 8px rgba(255, 0, 0, .302);
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding: .3rem 1.1rem;
+            transition: box-shadow .3s ease;
+        box-icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .c_title_detail{
+        p{
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    }
+}

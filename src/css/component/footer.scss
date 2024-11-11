@@ -1,0 +1,42 @@
+@import '../common';
+
+.footer{
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 3%;
+    .logo{
+        font-size: 2.5rem;
+        font-weight: 600;
+        justify-content: normal;
+        align-items: center;
+        display: flex;
+        @include res('tablet'){
+            margin-left: 2rem;
+        }
+        >a{}
+    }
+    .f_con{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        a{color: inherit;}
+        .f{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            >li{
+                >a{color: inherit;}
+            }
+        }
+        .f_2{
+            >li{}
+        }
+        .f_3{
+            >li{}
+        }
+    }
+}

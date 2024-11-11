@@ -1,0 +1,109 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+button {
+  cursor: pointer;
+  outline: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1660px;
+  margin: auto;
+}
+
+.b_btn {
+  background-color: red;
+  border: 4px solid transparent;
+  border-radius: 15px;
+  box-shadow: 0 0 7px 8px rgba(255, 0, 0, 0.3);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.5rem 1.8rem;
+  position: relative;
+  transition: box-shadow 0.3s;
+}
+
+.b_btn2 {
+  background-color: transparent;
+  border: 4px solid #fff;
+  box-shadow: none;
+  color: #fff;
+  transition: color 0.3s;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.5rem 1.8rem;
+  margin-left: 1rem;
+}
+
+.b_btn2:hover {
+  background-color: #fff;
+  box-shadow: none;
+  color: red;
+}
+
+.c_btn {
+  background-color: transparent;
+  border: 3px solid #fff;
+  border-width: 2px;
+  border-radius: 15px;
+  box-shadow: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.25rem 1.5rem;
+  position: relative;
+  color: white;
+}
+
+.c_btn:hover {
+  background-color: #fff;
+  box-shadow: none;
+  color: red;
+}
+
+.f_btn {
+  background-color: red;
+  border: 4px solid transparent;
+  border-radius: 15px;
+  color: #fff;
+  font-synthesis-weight: 600;
+  transition: 0.3s;
+  border-width: 2px;
+  font-size: 1rem;
+  padding: 0.25rem 1.5rem;
+  position: absolute;
+  right: 0;
+  top: 2px;
+}
+
+.f_btn:hover {
+  box-shadow: 0 0 7px 15px rgba(255, 0, 0, 0.302);
+}

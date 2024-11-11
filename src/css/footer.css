@@ -1,0 +1,31 @@
+.footer {
+  max-width: 1000px;
+  margin-bottom: 3%;
+}
+.footer .logo {
+  font-size: 2.5rem;
+  font-weight: 600;
+  justify-content: normal;
+  align-items: center;
+  display: flex;
+}
+.footer .f_con {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+.footer .f_con a {
+  color: inherit;
+}
+.footer .f_con .f {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.footer .f_con .f > li > a {
+  color: inherit;
+}

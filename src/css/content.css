@@ -1,0 +1,209 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+button {
+  cursor: pointer;
+  outline: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1660px;
+  margin: auto;
+}
+
+@keyframes infiniteAnimation1 {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  50.1% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes infiniteAnimation2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+.content_grid1 {
+  padding: 0 2rem;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
+}
+.content_grid1 .grid_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.content_grid1 .content_cardbox {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.content_card .c_img {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  padding-top: 160%;
+  position: relative;
+}
+.content_card .c_img.c_img:hover {
+  color: red;
+}
+.content_card .c_img.c_img::before {
+  background-color: #000;
+  border-radius: 15px;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  transition: 0.3s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .content_card .c_img:hover::before {
+    opacity: 0.8;
+  }
+  .content_card .c_img:hover .card-btn {
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+}
+.content_card .c_img .card-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s;
+  box-shadow: 0.3s;
+  background-color: red;
+  border: 4px solid transparent;
+  border-radius: 15px;
+  box-shadow: 0 0 7px 8px rgba(255, 0, 0, 0.302);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.3rem 1.1rem;
+  transition: box-shadow 0.3s ease;
+}
+.content_card .c_img box-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content_card .c_title > p {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.wrapper {
+  margin-bottom: 5%;
+  overflow: hidden;
+}
+
+.wrapper .slide_container .slide_wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.wrapper .slide_container .slide.original {
+  animation: 25s linear infinite normal none running infiniteAnimation1;
+}
+
+.wrapper .slide_container .slide.clone {
+  animation: 25s linear infinite infiniteAnimation2;
+}
+
+.wrapper .slide_container .slide.stop {
+  animation-play-state: paused;
+}
+
+.wrapper .slide_container .slide div {
+  cursor: pointer;
+  z-index: 2;
+  transition: 0.3s;
+  transform: scale(1);
+  margin-left: 0.4%;
+  margin-right: 0.4%;
+}
+
+.slide li .item img {
+  width: 100%;
+}
+
+.wrapper .slide_container .slide div:hover {
+  transform: scale(0.98);
+}
+
+.wrapper .slide_container .slide div:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.content_grid {
+  padding: 0 2rem;
+  margin-bottom: 15rem;
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 15% 15% 15% 15% 15% 15%;
+  -moz-column-gap: 2%;
+       column-gap: 2%;
+  row-gap: 3%;
+}
+.content_grid .listbox {
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
