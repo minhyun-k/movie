@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- logo -->
-<img src="https://github.com/minhyun-k/Book-IEUM/blob/main/public/loading-1.png" width="400" height="400"/>
+<img src="https://github.com/minhyun-k/movie/blob/main/public/movie_thumb.jpg" width="400" height="400"/>
 
 ### YFLIX 🖍️
 
@@ -34,29 +34,17 @@
 
 |화면 명|
 |:---:|
-|로딩 화면|
-|<img src="https://github.com/minhyun-k/Book-IEUM/blob/main/public/loading.gif" width="450"/>|
-|처음 어플리케이션 실행 시 로딩화면 출력|
-|메인 홈|
+|홈 화면|
+|<img src="https://github.com/minhyun-k/movie/blob/main/public/Movie_home.gif" width="450"/>|
+|메인 홈 화면입니다. 최근 가장 인기있는 영화를 배너에서 출력하였으며, 그 아래로 각 카테고리에 맞는 데이터가 출력되게 했습니다. 스와이퍼 기능을 추가해 사용자가 보다 나은 경험을 할 수 있도록 했습니다.|
+|목록, 상세 페이지|
 |:---:|
-|<img src="https://github.com/minhyun-k/Book-IEUM/blob/main/public/Home.gif" width="450"/>|
-|홈 화면은 서버요청을 통해 베스트셀러, 신간 등 카테고리에 맞는 데이터가 출력되어 사용자가 도서 목록을 확인할 수 있습니다.|
-|도서목록|
+|<img src="https://github.com/minhyun-k/movie/blob/main/public/movie_list.gif" width="450"/>|
+|영화목록과 상세페이지입니다. 헤더 메뉴를 클릭하면 각 메뉴에 맞는 영화 목록이 나오며, 홈 화면, 리스트 페이지에서 사용자가 원하는 콘텐츠를 클릭했을 때, 상세페이지로 바로 이동합니다. 상세페이지 이동은 데이터 id값을 로컬 저장소를 사용하여 출력했습니다. 상세페이지는 영화 예고편과 더불어 더 상세한 정보를 사용자에게 제공합니다.|
+|검색기능|
 |:---:|
-|<img src="https://github.com/minhyun-k/Book-IEUM/blob/main/public/list.gif" width="450"/>|
-|홈 화면에서 각 카테고리별 더보기 클릭시, 혹은 헤더 메뉴 클릭시 각 카테고리에 맞는 도서 목록이 페이지에 출력됩니다.|
-|상세페이지|
-|:---:|
-|<img src="https://github.com/minhyun-k/Book-IEUM/blob/main/public/detail.gif" width="450"/>|
-|홈, 도서목록에서 사용자가 관심있는 도서 컨텐츠를 클릭 시, 클릭한 도서의 상세정보가 포함된 페이지가 열립니다. 이 페이지에서는 도서의 상세내용, 북마크, 코멘트 작성이 가능하며, 베스트셀러의 경우 베스트 순위, 신간의 경우 신간도서 표시가 제공됩니다.|
-|북마크 등록 및 코멘트 작성|
-|:---:|
-|<img src="https://github.com/minhyun-k/Book-IEUM/blob/main/public/detail2.gif" width="450"/>|
-|북마크 클릭시 '읽는중', '읽고싶어요' 등록 가능, firebase를 통해 각 로그인한 사용자 개인 북마크 기능 활성화, 코멘트 작성 시 별점과 리뷰(댓글형식)가 표시됩니다.|
-|마이페이지|
-|:---:|
-|<img src="https://github.com/minhyun-k/Book-IEUM/blob/main/public/mypage.gif" width="450"/>|
-|로그인 시 firebase를 사용하여, 각 사용자가 사용한 북마크와 코멘트가 출력되어 사용자의 경험, 히스토리를 확인할 수 있습니다.|
+|<img src="https://github.com/minhyun-k/movie/blob/main/public/movie_search.gif" width="450"/>|
+|영화사이트에서 제공하는 api를 이용하여 사용자가 좀 더 원하는 정보를 쉽게 얻을 수 있도록 검색 기능을 구현하였습니다. 사용자는 상단 헤더 메뉴를 통해 영화 목록 페이지에서 검색기능을 사용할 수 있습니다.|
 
 <br />
 
@@ -89,12 +77,14 @@
   - 영화 제목, 개봉일, 평점, 줄거리 등.
   - 추가로 영화 예고편 링크 및 제작사 정보 제공.
 
-### 4) **반응형 디자인**
-- **설명**: 모바일, 태블릿, 데스크톱에 최적화된 UI 제공.  
-- **기술 사용**: CSS Grid 및 Flexbox를 조합하여 유동적인 레이아웃 구성.
+### 4) **영화 상세 정보 제공**
+- **설명**: 개별 영화 카드 클릭 시 상세 정보 페이지로 이동.  
+- **제공 정보**: 
+  - 영화 제목, 개봉일, 평점, 줄거리 등.
+  - 추가로 영화 예고편 링크 및 제작사 정보 제공.
 
-### 5) **즐겨찾기 기능 (예정)**  
-- **설명**: 사용자가 좋아하는 영화를 저장하고 관리할 수 있는 기능(개발 중).
+### 5) **로그인 및 즐겨찾기 기능 (예정)**  
+- **설명**: 사용자가 좋아하는 영화를 저장하고 관리할 수 있는 기능 firebase를 사용하여 개발할 예정입니다.(개발 중).
 
 ---
 <br />
@@ -112,12 +102,6 @@
 - **해결 방법**: 
   - **Lazy Loading**을 도입하여 사용자가 스크롤할 때 이미지를 동적으로 로드.  
   - 이미지 크기를 최적화하고 CDN을 활용.
-
-### 3) **다양한 화면 크기 대응**
-- **문제**: 반응형 디자인 미흡으로 모바일 환경에서 레이아웃 깨짐 발생.  
-- **해결 방법**: 
-  - CSS 미디어 쿼리를 사용해 화면 크기별 레이아웃 조정.  
-  - Grid와 Flexbox를 활용하여 콘텐츠 정렬 및 크기 조절.
 
 
 ---
